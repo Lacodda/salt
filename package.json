@@ -9,7 +9,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Lacodda/salt"
+    "url": "https://github.com/lacodda/salt"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

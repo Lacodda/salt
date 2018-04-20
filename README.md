@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/salt.svg" width="320" alt="salt">
+  <img src="/salt.png" width="320" alt="salt">
 </p>
 <h1 align="center">Rapid styling of your web application</h1>
 <br>
