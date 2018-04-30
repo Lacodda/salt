@@ -8,4 +8,4 @@
 Salt is a lightweight mobile-first CSS framework for rapid styling your web application
 
 ## License
-The code is available under the [MIT License](LICENSE.md).
+[MIT](LICENSE)
