@@ -2,14 +2,25 @@
   "name": "salt",
   "version": "0.0.1",
   "description": "A lightweight mobile-first CSS framework for rapid styling your web application",
-  "scripts": {
-    "start": "gulp"
-  },
   "author": "Kirill Lahtachev",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/lacodda/salt"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "scss",
+    "template"
+  ],
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "build:favicon": "gulp favicon",
+    "build:full": "gulp build && gulp favicon",
+    "server": "gulp server"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
