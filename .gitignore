@@ -7,11 +7,16 @@ yarn.lock
 # Build
 dist/
 build/
+stats.json
 
 # IDEs
 .idea/
 .vscode/
 jsconfig.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
 
 # Temporary
 tmp/
@@ -54,3 +59,6 @@ lib-cov/
 
 # Optional REPL history
 .node_repl_history
+
+# SSL
+ssl/

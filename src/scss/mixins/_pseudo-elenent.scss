@@ -1,7 +1,4 @@
-@mixin pseudo-element(
-  $el,
-  $content: ''
-) {
+@mixin pseudo-element($el, $content: '') {
   &::#{$el} {
     content: $content;
     @content;
@@ -21,7 +18,8 @@
 }
 
 @mixin before-after($content: '') {
-  &::before, &::after {
+  &::before,
+  &::after {
     content: $content;
     @content;
   }

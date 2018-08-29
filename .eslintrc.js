@@ -1,46 +1,44 @@
-// https://eslint.org/docs/user-guide/configuring
-
 module.exports = {
-  root: true,
-  parserOptions: {
-    parser: 'babel-eslint',
-  },
   env: {
     browser: true,
+    commonjs: true,
+    es6: true,
+    node: true
   },
-
-  extends: ['airbnb-base'],
-
-  // add your custom rules here
+  plugins: ['import', 'promise', 'compat', 'node'],
+  extends: [
+    'plugin:promise/recommended',
+    'airbnb-base',
+  ],
+  parser: 'babel-eslint',
+  parserOptions: {
+    sourceType: 'module',
+    ecmaVersion: 9,
+    ecmaFeatures: {
+      sourceType: 'module',
+      jsx: true
+    },
+    allowImportExportEverywhere: true
+  },
   rules: {
-    'import/extensions': [
-      'error', 'always', {
-        js: 'never',
-      },
-    ],
-
-    // disallow reassignment of function parameters
-    // disallow parameter object manipulation except for specific exclusions
-    'no-param-reassign': [
-      'error', {
-        props: true,
-        ignorePropertyModificationsFor: [
-          'acc', // for reduce accumulators
-          'e', // for e.returnvalue
-        ],
-      },
-    ],
-
-    // allow optionalDependencies
-    'import/no-extraneous-dependencies': [
-      'error', {
-        optionalDependencies: ['test/unit/index.js'],
-      },
-    ],
-
-    // allow debugger during development
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-
-    // indent: 'off',
-  },
+/*  
+    'semi': ['error', 'always'],
+    'curly': 0,
+    'promise/always-return': 0,
+    'promise/avoid-new': 0,
+    'compat/compat': 1,
+    'node/no-deprecated-api': 2,
+    'node/no-extraneous-require': 2,
+    'node/no-missing-require': 2,
+    'import/no-unresolved': [2, { commonjs: true, amd: true }],
+    'import/named': 2,
+    'import/namespace': 2,
+    'import/default': 2,
+    'import/export': 2,
+    'comma-dangle': ['error', 'only-multiline'],
+    'space-before-function-paren': ['error', 'never'],
+*/
+  }
 };
